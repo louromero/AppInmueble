@@ -43,7 +43,6 @@ AppInmueble/
 │   │   └── js/
 │
 │── nbproject/
-│── pom.xml (si usas Maven)
 │── README.md
 ```
 
