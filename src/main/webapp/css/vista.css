@@ -1,0 +1,335 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f8f7;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffffd9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el logo */
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #313131;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4b4b4b;
+    font-size: 16px;
+}
+
+/* Sección hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    margin: 10px auto;
+    width: 80%;
+    max-width: 1200px;
+    height: calc(100vh - 160px);
+}
+
+.hero-text {
+    max-width: 40%;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    color: #4b4b4b;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #7c7c7c;
+}
+
+/* Estilos del carrusel de imágenes */
+.hero-image-carousel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    animation: carousel 20s infinite ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    clip-path: circle(50% at 50% 50%);
+}
+
+/* Imágenes para el carrusel */
+@keyframes carousel {
+    0% {
+        background-image: url('https://theolivebranchnest.com/wp-content/uploads/2024/04/coastal-Dining-7.png');
+    }
+    20% {
+        background-image: url('https://theolivebranchnest.com/wp-content/uploads/2024/08/tuscan-home-ideas-60.jpeg');
+    }
+    40% {
+        background-image: url('https://theolivebranchnest.com/wp-content/uploads/2024/08/Tuscan-home-interior-6.jpeg');
+    }
+    60% {
+        background-image: url('https://theolivebranchnest.com/wp-content/uploads/2024/08/Tuscan-home-interior-4.jpeg');
+    }
+    80% {
+        background-image: url('https://theolivebranchnest.com/wp-content/uploads/2024/06/Scandinavian-Kitchen-Natural-Light.jpeg');
+    }
+    100% {
+        background-image: url('https://theolivebranchnest.com/wp-content/uploads/2024/04/coastal-Dining-7.png');
+    }
+}
+
+.info-banner {
+    text-align: center;
+    padding: 1px;
+    background-color: #e8e6e5;
+    font-size: 16px;
+    color: #4b4b4b;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Formularios*/
+.form-section {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-section h2 {
+    font-size: 24px;
+    color: #313131;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #4b4b4b;
+}
+
+.form-group input,
+.form-group select {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    /*background-color: #4b4b4b;*/
+    background-color: #eaaf4a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    /*background-color: #333;*/
+    background-color: #b59d5c;
+}
+
+.form-section p {
+    font-size: 14px;
+    color: #7c7c7c;
+}
+
+
+/* Media query para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .hero-text, .hero-image-carousel {
+        max-width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-image {
+        max-width: 80%;
+    }
+}
+
+/* Ajustes de navegación para el menú principal */
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #4b4b4b;
+    text-decoration: none;
+    /*font-weight: bold;*/
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #b59d5c;
+}
+
+/* Contenedor centrado */
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos de la card */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 90%;
+}
+
+/* Estilos de la tabla */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table thead tr {
+    background-color: #eaaf4a;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #eaaf4a;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Boton ver detalles*/
+.btn-detalle {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #eaaf4a;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detalle:hover {
+    background-color: #d1953b;
+}
+/* Estilos integrados para mantener la armonía */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
+    margin: 0;
+}
+.main-nav li {
+    margin-right: 25px;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.main-nav a:hover {
+    color: #28a745;
+}
+.main-nav .logout {
+    margin-left: auto;
+}
+.logo h1 a {
+    color: white;
+    text-decoration: none;
+}
